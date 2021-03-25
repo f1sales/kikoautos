@@ -23,6 +23,13 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
       customer
     end
 
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Form PWR3601'
+
+        product
+      end
+
 
     let(:lead) do
       lead = OpenStruct.new
@@ -32,6 +39,22 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
       lead.product = product
 
       lead
+    end
+
+    context 'when moto is on message' do
+      let(:lead) do
+        lead = OpenStruct.new
+        lead.message = 'Tags: scooter, honda, top'
+        lead.source = source
+        lead.customer = customer
+        lead.product = product
+
+        lead
+      end
+
+      it 'returns source name with moto' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
     end
 
     context 'when product contains harley' do

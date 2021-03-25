@@ -14,10 +14,11 @@ module Kikoautos
       moto
       yamaha
       street
+      scooter
     ]
 
     def self.switch_source(lead)
-      if BIKE_PRODUCTS.select { |w| lead.product.name.downcase.include?(w) }.count.positive?
+      if BIKE_PRODUCTS.select { |w| lead.product.name.downcase.include?(w) || (lead.message || '').downcase.include?(w) }.count.positive?
         "#{lead.source.name} - Motos"
       else
         lead.source.name
