@@ -82,5 +82,18 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
+
+    context 'when product contains HONDA ADV' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'HONDA ADV III0000'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
   end
 end
