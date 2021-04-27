@@ -8,13 +8,14 @@ module Kikoautos
   class Error < StandardError; end
   class F1SalesCustom::Hooks::Lead
 
-    BIKE_PRODUCTS = %w[
-      harley
-      triumph
-      moto
-      yamaha
-      street
-      scooter
+    BIKE_PRODUCTS = [
+      'harley',
+      'triumph',
+      'moto',
+      'yamaha',
+      'street',
+      'scooter',
+      'honda adv'
     ]
 
     def self.switch_source(lead)
