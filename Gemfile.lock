@@ -22,7 +22,7 @@ GIT
 PATH
   remote: .
   specs:
-    kikoautos (0.1.0)
+    kikoautos (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -55,4 +55,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   2.1.4
+   2.3.10

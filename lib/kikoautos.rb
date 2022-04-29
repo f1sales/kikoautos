@@ -9,13 +9,28 @@ module Kikoautos
   class F1SalesCustom::Hooks::Lead
 
     BIKE_PRODUCTS = [
+      'bigtrail',
+      'bmw gs',
+      'cg',
+      'city',
+      'custom',
+      'ducati',
+      'enduro',
       'harley',
-      'triumph',
+      'honda',
+      'kawasaki',
+      'ktm',
       'moto',
-      'yamaha',
-      'street',
+      'naked',
+      'pcx',
+      'royal enfield',
       'scooter',
-      'honda adv'
+      'sport',
+      'street',
+      'suzuki',
+      'trail',
+      'triumph',
+      'yamaha'
     ]
 
     def self.switch_source(lead)
@@ -27,3 +42,31 @@ module Kikoautos
     end
   end
 end
+
+
+=begin
+
+      'bigtrail',
+      'bmw gs',
+      'cg',
+      'city',
+      'custom',
+      'ducati',
+      'enduro',
+      'harley',
+      'honda',
+      'kawasaki',
+      'ktm',
+      'moto',
+      'naked',
+      'pcx',
+      'royal enfield',
+      'scooter',
+      'sport',
+      'street',
+      'suzukio',
+      'trail',
+      'triumph',
+      'yamaha'
+
+=end

@@ -95,5 +95,200 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
+
+    context 'when product contains Bigtrail' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Bigtrail'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains BMW GS' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'BMW GS'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains CG' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'CG'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains City' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'City'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains Custom' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Custom'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains Ducati' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Ducati'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Enduro' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Enduro'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Kawasaki' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Kawasaki'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Ktm' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'KTM'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Naked' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Naked'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains PCX' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'PCX'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Royal Enfield' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Royal Enfield'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Sport' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Sport'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Suzuki' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Suzuki'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Trail' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Trail'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
   end
 end
