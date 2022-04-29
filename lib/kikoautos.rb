@@ -12,7 +12,6 @@ module Kikoautos
       'bigtrail',
       'bmw gs',
       'cg',
-      'city',
       'custom',
       'ducati',
       'enduro',

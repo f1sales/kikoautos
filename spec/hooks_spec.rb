@@ -135,19 +135,6 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
       end
     end
 
-    context 'when product contains City' do
-      let(:product) do
-        product = OpenStruct.new
-        product.name = 'City'
-
-        product
-      end
-
-      it 'returns source name with motos' do
-        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
-      end
-    end
-
     context 'when product contains Custom' do
       let(:product) do
         product = OpenStruct.new
@@ -425,6 +412,19 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
       let(:product) do
         product = OpenStruct.new
         product.name = 'Sport'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+    
+    context 'when product contains Street' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'Street'
 
         product
       end
