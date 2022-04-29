@@ -9,17 +9,31 @@ module Kikoautos
   class F1SalesCustom::Hooks::Lead
 
     BIKE_PRODUCTS = [
+      'bigtrail',
+      'bmw gs',
+      'cg',
+      'custom',
+      'ducati',
+      'enduro',
       'harley',
-      'triumph',
+      'honda',
+      'kawasaki',
+      'ktm',
       'moto',
-      'yamaha',
-      'street',
+      'naked',
+      'pcx',
+      'royal enfield',
       'scooter',
-      'honda adv'
+      'sport',
+      'street',
+      'suzuki',
+      'trail',
+      'triumph',
+      'yamaha'
     ]
 
     def self.switch_source(lead)
-      if BIKE_PRODUCTS.select { |w| lead.product.name.downcase.include?(w) || (lead.message || '').downcase.include?(w) }.count.positive?
+      if BIKE_PRODUCTS.detect{ |w| lead.product.name.downcase.include?(w) || (lead.message || '').downcase.include?(w) }
         "#{lead.source.name} - Motos"
       else
         lead.source.name
