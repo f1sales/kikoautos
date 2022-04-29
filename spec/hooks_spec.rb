@@ -60,7 +60,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
     context 'when product contains harley' do
       let(:product) do
         product = OpenStruct.new
-        product.name = 'Harley-davidson Street glide PWR3601'
+        product.name = 'Harley-davidson Road glide special GHD0164'
 
         product
       end
@@ -119,6 +119,58 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
 
       it 'returns source name with motos' do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains BMW F 850 GS' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'BMW F 850 GS'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains BMW F 750 GS PREMIUM' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'BMW F 750 GS PREMIUM'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains BMW F 750 GS SPORT' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'BMW F 750 GS SPORT'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
+      end
+    end
+
+    context 'when product contains BMW M4' do
+      let(:product) do
+        product = OpenStruct.new
+        product.name = 'BMW M4'
+
+        product
+      end
+
+      it 'returns source name with motos' do
+        expect(described_class.switch_source(lead)).to eq('myHonda')
       end
     end
 
