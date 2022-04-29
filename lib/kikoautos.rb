@@ -42,31 +42,3 @@ module Kikoautos
     end
   end
 end
-
-
-=begin
-
-      'bigtrail',
-      'bmw gs',
-      'cg',
-      'city',
-      'custom',
-      'ducati',
-      'enduro',
-      'harley',
-      'honda',
-      'kawasaki',
-      'ktm',
-      'moto',
-      'naked',
-      'pcx',
-      'royal enfield',
-      'scooter',
-      'sport',
-      'street',
-      'suzukio',
-      'trail',
-      'triumph',
-      'yamaha'
-
-=end
