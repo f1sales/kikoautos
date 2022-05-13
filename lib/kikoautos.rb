@@ -33,12 +33,13 @@ module Kikoautos
 
     def self.switch_source(lead)
       lead_product_name_downcase = lead.product.name.downcase
+      source_name = lead.source.name
       if BIKE_PRODUCTS.detect{ |w| lead_product_name_downcase.include?(w) || (lead.message || '').downcase.include?(w) }
-        "#{lead.source.name} - Motos"
+        "#{source_name} - Motos"
       elsif lead_product_name_downcase.include?('bmw' && 'gs')
-        "#{lead.source.name} - Motos"
+        "#{source_name} - Motos"
       else
-        lead.source.name
+        source_name
       end
     end
   end
