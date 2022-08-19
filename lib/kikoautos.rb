@@ -1,13 +1,11 @@
-require "kikoautos/version"
-
-require "f1sales_custom/source"
-require "f1sales_custom/hooks"
-require "f1sales_helpers"
+require 'kikoautos/version'
+require 'f1sales_custom/source'
+require 'f1sales_custom/hooks'
+require 'f1sales_helpers'
 
 module Kikoautos
   class Error < StandardError; end
   class F1SalesCustom::Hooks::Lead
-
     BIKE_PRODUCTS = [
       'bigtrail',
       'cg',
@@ -29,14 +27,14 @@ module Kikoautos
       'trail',
       'triumph',
       'yamaha'
-    ]
+    ].freeze
 
     def self.switch_source(lead)
-      lead_product_name_downcase = lead.product.name.downcase
+      product_name_down = lead.product.name.downcase
       source_name = lead.source.name
-      if BIKE_PRODUCTS.detect{ |w| lead_product_name_downcase.include?(w) || (lead.message || '').downcase.include?(w) }
+      if BIKE_PRODUCTS.detect { |w| product_name_down.include?(w) || (lead.message || '').downcase.include?(w) }
         "#{source_name} - Motos"
-      elsif lead_product_name_downcase.include?('bmw' && 'gs')
+      elsif product_name_down.include?('bmw' && 'gs')
         "#{source_name} - Motos"
       else
         source_name

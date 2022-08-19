@@ -1,10 +1,8 @@
-
 require File.expand_path '../spec_helper.rb', __FILE__
 require 'ostruct'
-require "f1sales_custom/hooks"
+require 'f1sales_custom/hooks'
 
 RSpec.describe F1SalesCustom::Hooks::Lead do
-
   context 'when has some moto info' do
     let(:source_name) { 'myHonda' }
 
@@ -23,13 +21,12 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
       customer
     end
 
-      let(:product) do
-        product = OpenStruct.new
-        product.name = 'Form PWR3601'
+    let(:product) do
+      product = OpenStruct.new
+      product.name = 'Form PWR3601'
 
-        product
-      end
-
+      product
+    end
 
     let(:lead) do
       lead = OpenStruct.new
@@ -251,7 +248,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Enduro' do
       let(:product) do
         product = OpenStruct.new
@@ -264,7 +261,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson 48' do
       let(:product) do
         product = OpenStruct.new
@@ -277,7 +274,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson 883' do
       let(:product) do
         product = OpenStruct.new
@@ -290,7 +287,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Breakout' do
       let(:product) do
         product = OpenStruct.new
@@ -303,7 +300,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Fat Bob' do
       let(:product) do
         product = OpenStruct.new
@@ -316,7 +313,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Fat Boy' do
       let(:product) do
         product = OpenStruct.new
@@ -329,7 +326,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Forty Eigth' do
       let(:product) do
         product = OpenStruct.new
@@ -342,7 +339,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Heritage' do
       let(:product) do
         product = OpenStruct.new
@@ -355,7 +352,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Harley Davidson Softail' do
       let(:product) do
         product = OpenStruct.new
@@ -368,7 +365,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Kawasaki' do
       let(:product) do
         product = OpenStruct.new
@@ -381,7 +378,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Ktm' do
       let(:product) do
         product = OpenStruct.new
@@ -394,7 +391,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Naked' do
       let(:product) do
         product = OpenStruct.new
@@ -407,7 +404,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains PCX' do
       let(:product) do
         product = OpenStruct.new
@@ -420,7 +417,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Royal Enfield' do
       let(:product) do
         product = OpenStruct.new
@@ -433,7 +430,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Royal Enfield Continental GT' do
       let(:product) do
         product = OpenStruct.new
@@ -446,7 +443,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Royal Enfield Himalayan' do
       let(:product) do
         product = OpenStruct.new
@@ -459,7 +456,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Sport' do
       let(:product) do
         product = OpenStruct.new
@@ -472,7 +469,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Street' do
       let(:product) do
         product = OpenStruct.new
@@ -485,7 +482,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Suzuki' do
       let(:product) do
         product = OpenStruct.new
@@ -498,7 +495,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Trail' do
       let(:product) do
         product = OpenStruct.new
@@ -511,7 +508,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Triumph Explorer' do
       let(:product) do
         product = OpenStruct.new
@@ -524,7 +521,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Triumph T100' do
       let(:product) do
         product = OpenStruct.new
@@ -537,7 +534,7 @@ RSpec.describe F1SalesCustom::Hooks::Lead do
         expect(described_class.switch_source(lead)).to eq('myHonda - Motos')
       end
     end
-    
+
     context 'when product contains Triumph Triple Black' do
       let(:product) do
         product = OpenStruct.new
